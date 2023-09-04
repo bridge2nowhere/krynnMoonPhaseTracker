@@ -1,4 +1,4 @@
-# krynnMoonPhaseTracker
+# Krynn Moon Phase Tracker
 This program tracks the three moons of Krynn. Useful for Wizards & Moon Sorcerers (if they can escape the Towers of High Sorcery. Years given are all AC, negative years would be PC, but I haven't tested them.
 
 ## Useage
