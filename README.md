@@ -2,9 +2,9 @@
 This program tracks the three moons of Krynn. Useful for Wizards & Moon Sorcerers (if they can escape the Towers of High Sorcery. Years given are all AC, negative years would be PC, but I haven't tested them.
 
 ## Useage
-"Up/Down" changes the day
-"Left/Right" changes the year
-"A" changes the moon
+* "Up/Down" changes the day
+* "Left/Right" changes the year
+* "A" changes the moon
 
 ## Try it
 You can run an emulated version with ProjectABE here: https://felipemanga.github.io/ProjectABE/?url=https://raw.githubusercontent.com/bridge2nowhere/krynnMoonPhaseTracker/main/KrynnMoons.hex
