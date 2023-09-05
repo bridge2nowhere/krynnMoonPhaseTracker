@@ -66,7 +66,7 @@ void setup() {
   arduboy.setFrameRate(30);
 }
 
-oes.
+
 void loop() {
   //wait for the next fram
   if (!(arduboy.nextFrame()))
@@ -76,12 +76,14 @@ void loop() {
   //left & right = change year
   //a button = change moon
   arduboy.pollButtons();
-  if (arduboy.justPressed(RIGHT_BUTTON)) {
+  if (arduboy.justPressed(LEFT_BUTTON)) {
     year--;
+    if (year == 0) year = -1;
   }
 
-  if (arduboy.justPressed(LEFT_BUTTON)) {
+  if (arduboy.justPressed(RIGHT_BUTTON)) {
     year++;
+    if (year == 0) year = 1;
   }
 
   if (arduboy.justPressed(UP_BUTTON)) {
@@ -114,10 +116,16 @@ void loop() {
   arduboy.setCursor(0, 0);
   arduboy.println("Krynn Moon Tracker");
   arduboy.print(month);
-  arduboy.print("-");
+  arduboy.print(" - ");
   arduboy.print(dayOfMonth);
-  arduboy.print("-");
-  arduboy.println(year);
+  arduboy.print(" - ");
+  if (year > 0) {
+    arduboy.print(year);
+    arduboy.println(" AC");
+  } else {
+    arduboy.print(abs(year));
+    arduboy.println(" PC");
+  }
   arduboy.println(days[dayOfWeek]);
   arduboy.println();
 
@@ -153,12 +161,11 @@ void loop() {
 void dateUpdate() {
   //find the year pattern there is three year cycle
   yearPattern = year % 3;
-  
+
   //use the day variable to find the calendar details
   month = (day / 28) + 1;
   dayOfMonth = (day % 28) + 1;
   dayOfWeek = (dayOfMonth % 7) + 1;
-
 }
 
 
